@@ -1,0 +1,8 @@
+# Ignore all .parquet files in the root of the repository
+*.parquet
+
+# Specific CSV files to ignore
+train.csv 
+test.csv
+data_dictionary.csv 
+sample_submission.csv
