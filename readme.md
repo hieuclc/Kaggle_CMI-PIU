@@ -4,14 +4,15 @@
 The [Kaggle competition: Child Mind Institute — Problematic Internet Use](https://www.kaggle.com/competitions/child-mind-institute-problematic-internet-use) was hosted on the Kaggle platform, sponsored by Dell & NVIDIA. My team achieved a Silver Medal, ranking 94th out of 3,559 teams. This repository contains our solution for the competition, including both the implementation and the report.
 
 ## Contributors
-- [Nguyễn Hữu Thế 22028155](https://github.com/thebeo2004)
-- [Ngô Duy Hiếu 22028280](https://github.com/hieuclc)
-- [Nguyễn Hữu Tiến 22028180](https://github.com/username3)
+- [Nguyễn Hữu Thế - 22028155](https://github.com/thebeo2004)
+- [Ngô Duy Hiếu - 22028280](https://github.com/hieuclc)
+- [Nguyễn Hữu Tiến - 22028180](https://github.com/username3)
 
 ## Project structure
+```text
 Kaggle_CMI-PIU/
 │
-├── data/                  # Data files (gitignored)
+├── data/                  # Data files (gitignored, which is freely accessed during the competition)
 │   ├── train.csv
 │   ├── test.csv
 │   ├── data_dictionary.csv
@@ -29,6 +30,7 @@ Kaggle_CMI-PIU/
 │   └── readme.md
 │
 └── [Other project files]
+```
 
 ## Methodology
 ![Our proposed methodology](./Methodology.png)
