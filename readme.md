@@ -6,7 +6,7 @@ The [Kaggle competition: Child Mind Institute — Problematic Internet Use](http
 ## Contributors
 - [Nguyễn Hữu Thế - 22028155](https://github.com/thebeo2004)
 - [Ngô Duy Hiếu - 22028280](https://github.com/hieuclc)
-- [Nguyễn Hữu Tiến - 22028180](https://github.com/username3)
+- [Nguyễn Hữu Tiến - 22028180](https://github.com/tien1712)
 
 ## Project structure
 ```text
