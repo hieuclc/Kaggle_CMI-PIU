@@ -34,6 +34,7 @@ Kaggle_CMI-PIU/
 
 ## Methodology
 ![Our proposed methodology](./Methodology.png)
+
 Our solution combines semi-supervised and supervised learning techniques to effectively leverage both labeled and unlabeled data. The competition presented a challenging healthcare dataset with substantial missing values and complex biomedical features related to internet usage patterns. With this hybrid approach, we aim to overcome data limitations and capture complex relationships between internet usage patterns and various health indicators.
 Key components of our approach:
 ### 1. Data Loading & Processing
@@ -50,7 +51,9 @@ Key components of our approach:
 - Model stacking with Voting Regressor to leverage different algorithm strengths
 
 ## Results & Conclusions
-The team compared the effectiveness between applying VIME to generate additional quality labeled samples and using only labeled samples from the original dataset, corresponding to two approaches: "Entire dataset" and "Only labeled data". While VIME has demonstrated breakthrough results on well-established traditional datasets such as MNIST (converted to tabular format), UCI Income, UCI Blog, and gene datasets related to blood cell characteristics (MRV, MPV, MCH, RET, PCT, MONO), these are datasets that have been thoroughly collected and refined.
+![Result table](./result.png)
+
+The team compared the effectiveness between applying VIME to generate additional quality-labeled samples and using only labeled samples from the original dataset, corresponding to two approaches: "Entire dataset" and "Only labeled data". While VIME has demonstrated breakthrough results on well-established traditional datasets such as MNIST (converted to tabular format), UCI Income, UCI Blog, and gene datasets related to blood cell characteristics (MRV, MPV, MCH, RET, PCT, MONO), these are datasets that have been thoroughly collected and refined.
 
 In real-world scenarios, data collection rarely reaches such ideal states, as evidenced by the CMI-PIU competition dataset with significant missing values in predictor columns. Our team has identified and evaluated key limitations in applying the VIME model to this problem, particularly regarding missing data handling and the mechanism for selecting new high-quality labeled samples.
 
