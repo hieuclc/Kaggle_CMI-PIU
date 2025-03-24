@@ -1,7 +1,7 @@
 # Kaggle Code Competition: Child Mind Institute — Problematic Internet Use
 
 ## Overview
-The [Kaggle competition: Child Mind Institute — Problematic Internet Use](https://www.kaggle.com/competitions/child-mind-institute-problematic-internet-use) was hosted on the Kaggle platform, sponsored by Dell & NVIDIA. My team achieved a Silver Medal, ranking 94th out of 3,559 teams. This repository contains our solution for the competition, including both the implementation and the report.
+The [Kaggle competition: Child Mind Institute — Problematic Internet Use](https://www.kaggle.com/competitions/child-mind-institute-problematic-internet-use) was hosted on the Kaggle platform, sponsored by Dell & NVIDIA. Our team achieved the *Kaggle Silver Medal*, ranked 94th out of 3,559 teams. The repository includes different implementation approaches and the final-term report for the course *Introduction to Machine Learning* at the University of Engineering and Technology, Vietnam National University, Hanoi.
 
 ## Contributors
 - [Nguyễn Hữu Thế - 22028155](https://github.com/thebeo2004)
@@ -35,29 +35,30 @@ Kaggle_CMI-PIU/
 ## Methodology
 ![Our proposed methodology](./Methodology.png)
 
-Our solution combines semi-supervised and supervised learning techniques to effectively leverage both labeled and unlabeled data. The competition presented a challenging healthcare dataset with substantial missing values and complex biomedical features related to internet usage patterns. With this hybrid approach, we aim to overcome data limitations and capture complex relationships between internet usage patterns and various health indicators.
-Key components of our approach:
+The competition introduced the Healthy Brain Network dataset, which includes clinical and research data of around five-thousand participants aged 5-22. The dataset is considered fairly challenging as it features a mix of time-series actigraphy data and tabular clinical assessments, while also presenting inconsistencies in the given physical activity data and Internet usage behavior data. Our solution applies semi-supervised and supervised learning techniques to effectively utilize the given dataset. With this hybrid approach, we aim to overcome data limitations and modelize associations between Internet usage patterns, physical activity and clinical measures.
+
+Key components of our methodology:
 ### 1. Data Loading & Processing
-- Comprehensive analysis of demographic, physical, and bioelectrical impedance measurements
-- Handling of missing values through advanced imputation techniques
+- Analyzing demographic, physical, and bioelectrical impedance measurements
+- Addressing missing values using different imputation techniques
 - Feature engineering to derive meaningful health-related metrics
-### 2. Semi-supervised Learning Phase
-- Implementation of VIME (Value Imputation and Mask Estimation) framework
+### 2. Semi-supervised Learning Approach
+- Implementing the VIME (Value Imputation and Mask Estimation) framework
 - Extracting feature representations from unlabeled data
 - Creating high-confidence pseudo-labels for previously unlabeled samples
-### 3. Supervised Learning Phase
-- Ensemble of gradient boosting models (LightGBM, XGBoost, CatBoost)
-- Hyperparameter optimization via Randomized Grid Search CV
+### 3. Supervised Learning Approach
+- Training an ensemble of gradient boosting models (LightGBM, XGBoost, CatBoost)
+- Optimizing hyperparameters with Randomized Grid Search CV
 - Model stacking with Voting Regressor to leverage different algorithm strengths
 
 ## Results & Conclusions
 ![Result table](./result.png)
 
-The team compared the effectiveness between applying VIME to generate additional quality-labeled samples and using only labeled samples from the original dataset, corresponding to two approaches: "Entire dataset" and "Only labeled data". While VIME has demonstrated breakthrough results on well-established traditional datasets such as MNIST (converted to tabular format), UCI Income, UCI Blog, and gene datasets related to blood cell characteristics (MRV, MPV, MCH, RET, PCT, MONO), these are datasets that have been thoroughly collected and refined.
+The competition used *public* and *private* dataset Quadratic Weighted Kappa (QWK) scores (as shown in the table) for evaluation, with the final ranking based on the *private* dataset QWK score. Our team evaluated the approaches of using only labeled samples from the original dataset ("**Only labeled data**") and applying VIME to generate high-quality labeled samples ("**Entire dataset**"). While VIME produced remarkable results on well-established datasets such as MNIST (converted to tabular format), UCI Income, UCI Blog, and genetic datasets related to blood cell characteristics (MRV, MPV, MCH, RET, PCT, MONO), it is still highly dependent on good pretraining data, making its performance vulnerable to the weaknesses of the given competition dataset, especially when working with unseen data.
 
-In real-world scenarios, data collection rarely reaches such ideal states, as evidenced by the CMI-PIU competition dataset with significant missing values in predictor columns. Our team has identified and evaluated key limitations in applying the VIME model to this problem, particularly regarding missing data handling and the mechanism for selecting new high-quality labeled samples.
+The final ranking suggests the importance of more focused efforts on data cleaning, preprocessing, and imputation techniques to improve model performance.
 
-For more detail, look at our report: [CMI-PIU Competition Report](./report.pdf).
+For more detail, refer to the [CMI-PIU Competition Report](./report.pdf).
 
 ## References
 
